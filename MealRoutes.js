@@ -3,14 +3,14 @@ const router = Router();
 
 
 
-const {getMeal, saveMeals, editMeal, deleteMeal} = require('./MealController');
+const {getMeal, saveMeals, deleteMeal, editMeal } = require('./MealController');
 
 
 
 
 router.get('/', getMeal);
 router.post('/saveMeals', saveMeals);
-router.put('/editMeal', editMeal);
-router.delete('/deleteMeal', deleteMeal);
 
+router.post('/deleteMeal', deleteMeal);
+router.post('/editMeal', editMeal);
 module.exports = router;
